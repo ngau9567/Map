@@ -123,6 +123,10 @@ st.map(data_su)
 
 #st.subheader('Collection Count')
 
+st.markdown("""
+---
+
+""")
 st.title("🌍 Collection Exploration on Multiple Filtering (Subject)")
 st.markdown("""
 ---
