@@ -169,7 +169,8 @@ if st.button("GO"):
     st.write(f"Collection Selected by Subject: {len(processing_text)}")
 
     st.write('Below is a List of Collections:', processing_text)
-
+    
+    st.map(processing_text)
 
 st.markdown("""
 ---
@@ -229,6 +230,8 @@ if st.button('Search'):
                     {process_text[['Collection Title', 'URL']]}
                     ---
                 ''')
+                
+                st.map(process_text)
 
             # Setting this flag to true so it prints output
             is_valid = True
