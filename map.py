@@ -88,7 +88,7 @@ for i in range(len(data['Subject'])):
 
 uni_list_final = [x.strip(' ') for x in uni_list]
 
-st.sidebar.subheader("Filter Subjects - Single Filtering")
+st.sidebar.subheader("Subject - Single Filtering")
 
 def get_unique_numbers(numbers):
     list_of_unique_numbers = []
@@ -132,7 +132,7 @@ st.markdown("""
 Selected Subjects:
 """)
 
-st.sidebar.subheader("Filter Subjects - Multiple Filtering")
+st.sidebar.subheader("Subject - Multiple Filtering")
 
 check_boxes = [st.sidebar.checkbox(sub, key=sub) for sub in final]
 
