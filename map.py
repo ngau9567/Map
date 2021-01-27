@@ -129,9 +129,7 @@ st.markdown("""
 """)
 st.title("🌍 Collection Exploration on Multiple Filtering (Subject)")
 st.markdown("""
----
 Selected Subjects:
-
 """)
 
 st.sidebar.subheader("Filter Subjects - Multiple Filtering")
