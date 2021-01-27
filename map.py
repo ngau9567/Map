@@ -176,9 +176,7 @@ st.markdown("""
 """)
 
 
-st.markdown("""
----
-""")
+st.title("🌍 Collection Exploration on Inputs (Subject)")
 
 st.markdown('''
     Put one or more desire subject fields in the box below, click the "Search" button, and
