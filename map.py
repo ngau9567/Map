@@ -80,7 +80,6 @@ def load_data():
 data = load_data()
 
 number = st.number_input('Enter a Year')
-number = int(number)
 
 if st.button("Find Collections on Year"):
 
