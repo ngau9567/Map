@@ -72,17 +72,33 @@ final = get_unique_numbers(uni_list_final)
 final.sort()
 
 format_final = data['Format'].unique()
+school_final = data['Institution'].unique()
 
+school_SELECTED = st.sidebar.multiselect('Please Enter the School Name', school_final)
 subject_SELECTED = st.sidebar.multiselect('Please Enter the Subject Field', final)
 format_SELECTED = st.sidebar.multiselect('Please Enter the Format Field', format_final)
 number = st.sidebar.number_input('Enter a Start Year')
 
-# Mask to filter dataframe
-#mask_countries = data['Subject'].isin(subject_SELECTED)
-
-#data = data[mask_countries]
-
 if st.sidebar.button("Search"):
+    
+    lir_school = []
+    for sub in school_SELECTED:
+        lir_school.append(sub)
+
+    def prepross_school (text):
+        # initialize an empty string
+        str_school = ""
+
+        # traverse in the string
+        for i in text:
+            str_school = i+'|'+str_school
+
+        str_school_final = str_school[:-1]
+
+        # return string
+        return data[data['Institution'].str.contains(str_school_final, case=False, regex=True)]
+
+    preprossing_school = prepross_school(lir_school)
 
     lir_2 = []
     for sub in subject_SELECTED:
@@ -99,7 +115,7 @@ if st.sidebar.button("Search"):
         str2 = str1[:-1]
 
         # return string
-        return data[data['Subject'].str.contains(str2, case=False, regex=True)]
+        return preprossing_school[preprossing_school['Subject'].str.contains(str2, case=False, regex=True)]
 
     processing_for = prepross(lir_2)
 
@@ -136,6 +152,7 @@ if st.sidebar.button("Search"):
 
     st.markdown(f'''
         Here's what your Collection List looks like after being Search:\n
+        **School: {school_SELECTED}**\n
         **Subject: {lir_2}**\n
         **Format: {lir_format}**\n
         **Year: {int(number)}**\n
