@@ -39,6 +39,10 @@ st.markdown('''
     ```
 ''')
 
+st.markdown("""
+---
+""")
+
 @st.cache
 def load_data():
     map_df = pd.read_csv("Final_Metadata_Two.csv", encoding='latin1')
