@@ -136,8 +136,8 @@ if st.sidebar.button("Search"):
 
     st.markdown(f'''
         Here's what your Collection List looks like after being Search:\n
-        **Subject: {lir_2}**\n
-        **Format: {lir_format}**\n
+        **Subject: {lir_2.value()}**\n
+        **Format: {lir_format.value()}**\n
         **Year: {int(number)}**\n
         ---
     ''')
