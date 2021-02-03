@@ -162,6 +162,10 @@ if st.sidebar.button("Search"):
     ''')
 
     st.write(f"Number of Collections: {len(data_final)}", data_final)
+    
+    st.markdown("""
+    ---
+    """)
 
     st.table(data_des)
 
