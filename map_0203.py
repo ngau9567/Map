@@ -33,9 +33,11 @@ st.markdown('''
     A sample input should look something like the following:\n
     
     ```
+    Columbia University
     Art culture
     Image Text
     1600
+    
     ```
 ''')
 
