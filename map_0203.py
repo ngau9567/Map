@@ -134,7 +134,9 @@ if st.sidebar.button("Search"):
     data_final = data_input[['Collection Title', 'Institution', 'Library', 'Format', 'Subject', 'Start Year', 'End Year']]
     data_des = data_input[['Collection Title', 'Description', 'Address']]
 
-    st.write(f"Filtering Subject by:\n {lir_2}\n and Format by {lir_format}\n within Year of\n {int(number)}")
+    st.markdown(f"Filtering Subject by {lir_2}\n
+    Format by {lir_format}\n 
+    within Year of {int(number)}")
 
     st.write(f"Number of Collections: {len(data_final)}", data_final)
 
