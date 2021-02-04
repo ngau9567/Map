@@ -26,7 +26,7 @@ st.sidebar.markdown('''
     ---
 ''')
 st.markdown('''
-    This website offers multiple category search function for our database on Chinese Digital Collections.\n
+    This website offers multiple category search function for our database on Chinese Digital Collections. The dashboard link is here: https://arcg.is/14qPaG\n
     Choose the desired fields for each categories on the left sidebar, click the "Search" button, and
     we'll get to work!\n
     You can also conduct a singular search by entering fewer inputs.\n
