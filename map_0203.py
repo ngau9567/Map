@@ -22,14 +22,46 @@ st.set_page_config(
 st.title("🌍 Collection Exploration on the United States and Canada")
 st.sidebar.markdown('''
     # Mapping Digital Collections on Chinese Studies in North America
-
-    ---
+---
 ''')
+
+group_info = st.sidebar.checkbox('Project Members')
+if group_info:
+    st.sidebar.markdown('''
+        #### Dr. Yan He (PI),
+        China Documentation Center Librarian
+    ''')
+
+    st.sidebar.markdown('''
+        #### Dr. Ann James (Co-PI),
+        Data Science Libraian
+    ''')
+
+    st.sidebar.markdown('''
+    Mr. Kahang Ngau, MS student
+
+    Ms. Sophie Muro, MA student
+    ''')
+
+Content_info = st.sidebar.checkbox('Content Info')
+if Content_info:
+    st.sidebar.markdown('''
+For CONTENT comments or questions please Email:
+
+    hey@gwu.edu
+
+For TECHNICAL issues or questions please Email:
+
+    kngau@gwu.edu
+
+---
+''')
+ 
 st.markdown('''
     This website offers multiple category search function for our database on Chinese Digital Collections. The dashboard link is here: https://arcg.is/14qPaG\n
     Choose the desired fields for each categories on the left sidebar, click the "Search" button, and
-    we'll get to work!\n
-    You can also conduct a singular search by entering fewer inputs.\n
+    we'll get to work! (You can also conduct a singular search by entering fewer inputs.)\n
+    
     A sample input should look something like the following:\n
     
     ```
