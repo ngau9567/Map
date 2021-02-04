@@ -41,6 +41,7 @@ if group_info:
     Mr. Kahang Ngau, MS student
 
     Ms. Sophie Muro, MA student
+    
 ---
     ''')
 
