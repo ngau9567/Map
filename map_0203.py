@@ -45,6 +45,9 @@ st.markdown("""
 ---
 """)
 
+
+st.sidebar.subheader("Multiple Filtering")
+
 @st.cache
 def load_data():
     map_df = pd.read_csv("Final_Metadata_Two.csv", encoding='latin1')
@@ -52,16 +55,18 @@ def load_data():
 
 data = load_data()
 
-uni_list = []
-for i in range(len(data['Subject'])):
-    list_1 = data['Subject'][i].split (",")
-    uni_list += list_1
+def get_unique_value(df):
 
-uni_list_final = [x.strip(' ') for x in uni_list]
+    uni_list = []
+    for i in range(len(df)):
+        list_1 = df[i].split (",")
+        uni_list += list_1
+    uni_list_final = [x.strip(' ') for x in uni_list]
 
-st.sidebar.subheader("Multiple Filtering")
+    return uni_list_final
 
 def get_unique_numbers(numbers):
+
     list_of_unique_numbers = []
     unique_numbers = set(numbers)
     for number in unique_numbers:
@@ -69,11 +74,15 @@ def get_unique_numbers(numbers):
 
     return list_of_unique_numbers
 
-final = get_unique_numbers(uni_list_final)
+sub_list = get_unique_value(data['Subject'])
+format_list = get_unique_value(data['Format'])
+
+final = get_unique_numbers(sub_list)
+format_final = get_unique_numbers(format_list)
 
 final.sort()
+format_final.sort()
 
-format_final = data['Format'].unique()
 school_final = data['Institution'].unique()
 
 school_SELECTED = st.sidebar.multiselect('Please Enter the School Name', school_final)
