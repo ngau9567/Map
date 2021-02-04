@@ -147,8 +147,6 @@ if st.sidebar.button("Search"):
         # return string
         return processing_for[processing_for['Format'].str.contains(str_final, case=False, regex=True)]
 
-    #data[data['Subject'].str.contains(str2, case=False, regex=True)]
-
     processing_sub = prepross_format(lir_format)
 
     if number == 0:
