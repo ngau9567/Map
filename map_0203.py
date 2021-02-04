@@ -55,9 +55,6 @@ def load_data():
 
 data = load_data()
 
-data['Format'] = data['Format'].replace(to_replace='Map', value='Maps', regex=True)
-data['Format'] = data['Format'].replace(to_replace='Mapss', value='Maps', regex=True)
-
 def get_unique_value(df):
 
     uni_list = []
