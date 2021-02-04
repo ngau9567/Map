@@ -41,11 +41,8 @@ if group_info:
     Mr. Kahang Ngau, MS student
 
     Ms. Sophie Muro, MA student
+    ---
     ''')
-    
-st.markdown("""
----
-""")
 
 Content_info = st.sidebar.checkbox('Content Info')
 if Content_info:
