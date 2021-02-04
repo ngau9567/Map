@@ -88,7 +88,7 @@ school_final = data['Institution'].unique()
 school_SELECTED = st.sidebar.multiselect('Please Enter the School Name', school_final)
 subject_SELECTED = st.sidebar.multiselect('Please Enter the Subject Field', final)
 format_SELECTED = st.sidebar.multiselect('Please Enter the Format Field', format_final)
-number = st.sidebar.number_input('Enter a Start Year')
+number = st.sidebar.number_input('Enter a Year')
 
 if st.sidebar.button("Search"):
     
