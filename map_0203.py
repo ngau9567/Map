@@ -44,7 +44,7 @@ if group_info:
     
     ''')
 
-Content_info = st.sidebar.checkbox('Content Info')
+Content_info = st.sidebar.checkbox('Contact Info')
 if Content_info:
     st.sidebar.markdown('''
 For CONTENT comments or questions please Email:
