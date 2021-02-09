@@ -159,12 +159,12 @@ school_final = data['Institution'].unique()
 # Sidebar Selections #
 ###############
 
-state_SELECTED = st.sidebar.multiselect('Please Enter State Names', state_final)
-school_SELECTED = st.sidebar.multiselect('Please Enter School Names', school_final)
-subject_SELECTED = st.sidebar.multiselect('Please Enter Subject Fields', final)
-format_SELECTED = st.sidebar.multiselect('Please Enter Format Fields', format_final)
-number = st.sidebar.number_input('Please Enter a Year')
-key_word = st.sidebar.text_area('Please Enter a Key Word')
+state_SELECTED = st.sidebar.multiselect('Enter State Names', state_final)
+school_SELECTED = st.sidebar.multiselect('Enter School Names', school_final)
+subject_SELECTED = st.sidebar.multiselect('Enter Subject Fields', final)
+format_SELECTED = st.sidebar.multiselect('Enter Format Fields', format_final)
+number = st.sidebar.number_input('Enter a Year')
+key_word = st.sidebar.text_area('Enter a Key Word')
 
 ###############
 # Sidebar Button #
