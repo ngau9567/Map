@@ -13,10 +13,10 @@ import webbrowser
 import streamlit as st
 
 import nltk
-#from nltk.stem import *
-#from nltk.stem import WordNetLemmatizer
-#from nltk.tokenize import RegexpTokenizer
-#from nltk.corpus import stopwords
+from nltk.stem import *
+from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import RegexpTokenizer
+from nltk.corpus import stopwords
 nltk.download('punkt')
 nltk.download('wordnet')
 nltk.download('stopwords')
