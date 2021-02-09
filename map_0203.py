@@ -113,7 +113,7 @@ state_final = data['State'].unique()
 state_final.sort()
 school_final = data['Institution'].unique()
 
-state_SELECTED = st.sidebar.multiselect('Please Enter the State', state_final)
+state_SELECTED = st.sidebar.multiselect('Please Enter the State Name', state_final)
 school_SELECTED = st.sidebar.multiselect('Please Enter the School Name', school_final)
 subject_SELECTED = st.sidebar.multiselect('Please Enter the Subject Field', final)
 format_SELECTED = st.sidebar.multiselect('Please Enter the Format Field', format_final)
