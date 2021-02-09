@@ -49,7 +49,7 @@ feedback_info = st.sidebar.checkbox('Feedback')
 Form = 'https://docs.google.com/forms/d/e/1FAIpQLSf83PHe3WHt6O7OuT7ZuE65HOQ8EN_EGuxiINidZbZ8IMzNyw/viewform'
 if feedback_info:
     st.sidebar.markdown('''
-    We love to have your feedback! If you can click the following and complete the form, we will be greatly appreciate!
+    We love to have your feedback! If you can click the following and complete the form, we will greatly appreciate!
 
     ''')
     st.sidebar.markdown(Form, unsafe_allow_html=True)
