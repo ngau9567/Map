@@ -12,7 +12,7 @@ import pydeck as pdk
 import webbrowser
 import streamlit as st
 
-#import nltk
+import nltk
 #from nltk.stem import *
 #from nltk.stem import WordNetLemmatizer
 #from nltk.tokenize import RegexpTokenizer
