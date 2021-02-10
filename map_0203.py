@@ -305,24 +305,6 @@ if st.sidebar.button("Search"):
         # return string
         return processing_text[processing_text['words'].str.contains(str_word_final, case=False, regex=True)]
 
-    #def process_word(text):
-        #process_word = text.lower().strip()
-        #return process_word
-
-    #processing_word = process_word(key_word)
-
-    ### Returns true if the search word in the tokenized column, and false if not.
-    #def get_word(text):
-        #if processing_word in text:
-            #return True
-        #else:
-            #return False
-
-    ### Created 'check' column to store the value.
-    #processing_text['check'] = processing_text['tokens'].apply(lambda x: get_word(x))
-
-    #processing_sub = processing_text[processing_text['check']==True]
-
     processing_sub = prepross_word(lir_word)
 
     if number == 0:
