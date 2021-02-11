@@ -97,7 +97,7 @@ st.sidebar.subheader("Multiple Filtering")
 ###############
 
 st.markdown('''
-    #### This website offers Multiple Filtering functions for our database of Chinese Digital Collections. The dashboard link is: https://arcg.is/14qPaG\n
+    #### This website offers Multiple Filtering functions for our database of Chinese Digital Collections. The dashboard link is: <a href='https://arcg.is/14qPaG'>f</a> \n
     #### Choose the desired fields for each categories on the left sidebar, click the "Search" button, and we'll get to work! (You can also conduct a singular search by only entering one input.)\n
 
 ''')
