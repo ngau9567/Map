@@ -97,10 +97,19 @@ st.sidebar.subheader("Multiple Filtering")
 ###############
 
 st.markdown('''
-    #### This website offers Multiple Filtering functions for our database of Chinese Digital Collections. The dashboard link is: https://esrifed-comm.maps.arcgis.com/apps/opsdashboard/index.html#/31c48340b5ab426c8416446f04954471\n
+    #### This website offers Multiple Filtering functions for our database of Chinese Digital Collections.\n
     #### Choose the desired fields for each categories on the left sidebar, click the "Search" button, and we'll get to work! (You can also conduct a singular search by only entering one input.)\n
 
 ''')
+
+dashboard_info = st.checkbox('Dashboard Link')
+dashboard_link = 'https://esrifed-comm.maps.arcgis.com/apps/opsdashboard/index.html#/31c48340b5ab426c8416446f04954471'
+if dashboard_info:
+    st.markdown('''
+    The dashboard link for the project is here:
+
+    ''')
+    st.markdown(dashboard_link, unsafe_allow_html=True)
 
 ###############
 # Data Loaded #
