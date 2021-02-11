@@ -287,25 +287,22 @@ if st.sidebar.button("Search"):
         return f'<a href="{link}">{link}</a>'
 
     processing_text = prepross_format(lir_format)
-
+    
+    # create a list to store all the input words from users 
     lir_word = []
     for sub in word_SELECTED:
         lir_word.append(sub)
 
     def prepross_word(text):
-        # initialize an empty string
-        str_word = ""
+        # for loop to iterate through the list lir_word
+        for i in lir_word:
+            if i in text:
+                return True
+                continue
 
-        # traverse in the string
-        for i in text:
-            str_word = i+'|'+str_word
+    processing_text['check'] = processing_text['tokens'].apply(lambda x: prepross_word(x))
 
-        str_word_final = str_word[:-1]
-
-        # return string
-        return processing_text[processing_text['words'].str.contains(str_word_final, case=False, regex=True)]
-
-    processing_sub = prepross_word(lir_word)
+    processing_sub = processing_text[processing_text['check']==True]
 
     if number == 0:
         data_input = processing_sub.sort_values(by=['Start Year'])
