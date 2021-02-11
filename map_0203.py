@@ -106,7 +106,7 @@ st.markdown('''
 # Data Loaded #
 ###############
 
-### First of all, define a load_data function to read the csv file we want to use.
+### First of all, define a load_data function to read the csv file we want to use
 def load_data():
     map_df = pd.read_csv("Final_Metadata_Final.csv", encoding='latin1')
     return map_df
@@ -118,19 +118,24 @@ data = load_data()
 ###############
 
 ### Natural Language Processing
-### Conduct NLP in applying 'Stopwords' and 'Lemmatizer' functions to get rid of some of the redundant words.
+### Conduct NLP in applying 'Stopwords' and 'Lemmatizer' functions to get rid of some of the redundant words
 wordnet_lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words('english'))
 
-### Function to only include processed words but not words in stop_words.
+### Function to only include processed words but not words in stop_words
 def process(line):
     return([wordnet_lemmatizer.lemmatize(t) for t in tokenizer.tokenize(line) if t not in stop_words])
 
-### Created column 'tokens' to contains all tokenized words from Description column.
+### Function to get rid of numeric value in text searching
+def numeric(line):
+    return([ele for ele in line if ele.isnumeric()==False])  
+  
+### Created column 'tokens' to contains all tokenized words from Description column
 tokenizer = RegexpTokenizer(r'\w+')
-data['tokens'] = data['Description'].str.lower().apply(process)
+data['token'] = data['Description'].str.lower().apply(process)
+data['tokens'] = data['token'].apply(numeric)
 
-### Created column 'words' to split the 'tokens' column into string separated by comma.
+### Created column 'words' to split the 'tokens' column into string separated by comma
 def split_list(text):
     return ",".join(text)
 
@@ -140,14 +145,14 @@ data['words'] = data['tokens'].apply(lambda x: split_list(x))
 # Functions #
 ###############
 
-### Create a function to return the state name from the address column.
+### Create a function to return the state name from the address column
 ### It uses the the third last element from each collections' address.
 def split_word(text):
     States = text.split(',')[-3]
     state = States.strip()
     return state
 
-### This function finds the value in a row of a column that separated by comma.
+### This function finds the value in a row of a column that separated by comma
 def get_unique_value(df):
 
     uni_list = []
@@ -158,7 +163,7 @@ def get_unique_value(df):
 
     return uni_list_final
 
-### This function finds the unique value of a list.
+### This function finds the unique value of a list
 def get_unique_numbers(numbers):
 
     list_of_unique_numbers = []
