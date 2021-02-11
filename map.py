@@ -74,7 +74,7 @@ st.title("🌍 Collection Exploration on Inputing Year")
 
 @st.cache
 def load_data():
-    map_df = pd.read_csv("Final_Metadata_Two.csv", encoding='latin1')
+    map_df = pd.read_csv("Final_Metadata_Final.csv", encoding='latin1')
     return map_df
 
 data = load_data()
