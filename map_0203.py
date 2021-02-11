@@ -306,9 +306,14 @@ if st.sidebar.button("Search"):
                 continue
 
     processing_text['check'] = processing_text['tokens'].apply(lambda x: prepross_word(x))
-
-    processing_sub = processing_text[processing_text['check']==True]
-
+    
+    # Determine if the list of text input is empty
+    if len(lir_word) == 0:
+        processing_sub = processing_text
+    else:
+        processing_sub = processing_text[processing_text['check']==True]
+        
+    # Determine if the number input for year is empty
     if number == 0:
         data_input = processing_sub.sort_values(by=['Start Year'])
     else:
