@@ -31,6 +31,7 @@ import pandas as pd
 import pydeck as pdk
 import webbrowser
 import streamlit as st
+from collections import Counter
 
 import nltk
 from nltk.stem import *
@@ -208,6 +209,13 @@ state_final.sort()
 
 school_final = data['Institution'].unique()
 
+combined_list = []
+for i in range(len(data['tokens'])):
+    combined_list += data['tokens'][i]
+
+rslt = pd.DataFrame(Counter(combined_list).most_common(10),
+                    columns=['Word', 'Frequency']).set_index('Word')
+
 ###############
 # Sidebar Selections #
 ###############
@@ -218,6 +226,10 @@ subject_SELECTED = st.sidebar.multiselect('Enter Subject Fields', final)
 format_SELECTED = st.sidebar.multiselect('Enter Format Fields', format_final)
 number = st.sidebar.number_input('Enter a Year')
 word_SELECTED = st.sidebar.multiselect('Enter Key Words', word_final)
+
+common_word = st.sidebar.checkbox('Top 10 Most Common Words')
+if common_word:
+    st.sidebar.write(rslt)
 
 ###############
 # Sidebar Button #
