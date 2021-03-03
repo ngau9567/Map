@@ -55,7 +55,7 @@ st.set_page_config(
 
 st.title("🌍 Collection Exploration on the United States and Canada")
 st.sidebar.markdown('''
-    # Mapping Digital Collections on Chinese Studies in North America
+    # Digital Collections on Chinese Studies in the Uniteds States and Canada
 
 ''')
 
