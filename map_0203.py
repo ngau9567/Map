@@ -53,9 +53,9 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-st.title("🌍 Collection Exploration on the United States and Canada")
+st.title("🌍 Digital Collections on Chinese Studies in the Uniteds States and Canada")
 st.sidebar.markdown('''
-    # Digital Collections on Chinese Studies in the Uniteds States and Canada
+    # Navigation Bar for Multiple Searching
 
 ''')
 
