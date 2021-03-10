@@ -121,7 +121,7 @@ st.markdown('''
 #@st.cache
 ### First of all, define a load_data function to read the csv file we want to use
 def load_data():
-    map_df = pd.read_csv("Up_20210120_with keywords_final.csv", encoding='latin1')
+    map_df = pd.read_csv("Up_20210120_with_keywords_Final.csv", encoding='latin1')
     return map_df
 
 data = load_data()
