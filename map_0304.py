@@ -267,8 +267,8 @@ if session_state.button_confirm:
 
         data_third['Links'] = data_third['URL'].apply(lambda x: make_clickable(x))
 
-        data_final = data_third[['Collection Title', 'Institution', 'Library', 'Type of Library', 'Lanuages', 'General Format', 'Specific Formats', 'Subject', 'Keywords', 'Start Year', 'End Year']]
-        data_des = data_third[['Collection Title', 'Description', 'Address']]
+        data_final = data_third[['Institution', 'Library', 'Type of Library', 'Lanuages', 'General Format', 'Specific Formats', 'Subject', 'Keywords', 'Start Year', 'End Year']]
+        data_des = data_third[['Collection Title', 'General Format', 'Specific Formats', 'Description', 'Address']]
 
         st.write(f"Number of Collections: {len(data_third)}", data_final)
 
