@@ -299,7 +299,7 @@ if session_state.button_confirm:
     ---
         ''')
 
-        #st.map(data_third)
+        st.map(data_third)
         progress_bar.progress(1.0)
 
         st.balloons()
