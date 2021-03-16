@@ -191,7 +191,7 @@ def get_unique_numbers(numbers):
 ###############
 
 general_format_list = get_unique_value(data['General Format'])
-sub_list = get_unique_value(data['Subject'])
+sub_list = get_unique_value(data['Subjects'])
 
 general_format_final = get_unique_numbers(general_format_list)
 major_subject_final = get_unique_numbers(sub_list)
