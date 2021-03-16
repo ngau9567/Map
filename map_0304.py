@@ -153,7 +153,6 @@ def split_list(text):
     return ",".join(text)
 
 data['words'] = data['tokens'].apply(lambda x: split_list(x))
-data['Subject'] = data['Major Subject']+', '+data['Other Subjects'].fillna('')
 
 ###############
 # Functions #
