@@ -54,7 +54,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-st.title("🌍 Digital Collections on Chinese Studies in the Uniteds States and Canada")
+st.title("🌍 Digital Collections on Chinese Studies in the United States and Canada")
 st.sidebar.markdown('''
     # Group Information & Feedback Section
 
